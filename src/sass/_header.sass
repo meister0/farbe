@@ -1,0 +1,53 @@
+.header
+  height: 70px
+  width: 100%
+  padding: 6px 0px
+  background-color: $color-main
+  .wrapper
+    display: flex
+    justify-content: space-around
+  &-logo
+    display: block
+    img
+      width: 140px
+      height: 58px
+
+  &-links
+    display: flex
+    justify-content: space-between  
+    width: 40%
+  &-link
+    font-family: Roboto
+    font-size: 18px
+    font-weight: 400
+    text-decoration: none
+    position: relative
+    display: flex
+    align-items: center
+    &:visited
+      color: $color-text
+    &::before 
+      content: ''
+      bottom: 15px  
+      left: 0
+      position: absolute
+      width: 100%
+      height: 2px
+      background-color: #0d0d0d
+      transition: 0.2s
+      transform: scaleX(0)
+    &:hover::before 
+      transform: scaleX(1)
+
+  &-button
+    height: 45px
+    border-radius: 3px
+    border: 1px solid #333333
+    background-color: transparent
+    &:hover
+      background-color: #333333
+      color: $color-main
+      background-image: none
+    &-wrapper
+      display: flex
+      align-items: center

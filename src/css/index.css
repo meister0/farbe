@@ -1,0 +1,119 @@
+.button {
+  width: 180px;
+  height: 51px;
+  border-radius: 8px;
+  background-color: white;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffdf00), to(rgba(255, 223, 0, 0)));
+  background-image: linear-gradient(90deg, #ffdf00 0%, rgba(255, 223, 0, 0) 100%);
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 1210px;
+  margin: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  padding: 6px 0px;
+  background-color: #ffdf00;
+}
+
+.header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo img {
+  width: 140px;
+  height: 58px;
+}
+
+.header-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.header-link {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header-link:visited {
+  color: #333333;
+}
+
+.header-link::before {
+  content: '';
+  bottom: 15px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #0d0d0d;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.header-link:hover::before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.header-button {
+  height: 45px;
+  border-radius: 3px;
+  border: 1px solid #333333;
+  background-color: transparent;
+}
+
+.header-button:hover {
+  background-color: #333333;
+  color: #ffdf00;
+  background-image: none;
+}
+
+.header-button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
