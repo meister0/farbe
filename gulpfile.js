@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const concatCSS = require('gulp-concat-css');
 //const ftp = require('vinyl-ftp');
-const gutil = require('gulp-util');
+//const gutil = require('gulp-util');
 
 // Compile sass into CSS, auto-inject into browsers, auto-prefixes + concatination sass(css)'s files
 function style(done) {
@@ -17,7 +17,7 @@ function style(done) {
 		)
 		.on('error', console.error.bind(console))
 		.pipe(autoprefixer({ cascade: false }))
-		.pipe(concatCSS('style.css'))
+		.pipe(concatCSS('index.css'))
 		.pipe(gulp.dest('src/css'))
 		.pipe(browserSync.stream());
 	done();
