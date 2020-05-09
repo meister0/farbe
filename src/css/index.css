@@ -1,4 +1,13 @@
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 180px;
   height: 51px;
   border-radius: 8px;
@@ -766,7 +775,6 @@ body {
   height: 490px;
   background-color: #333333;
   color: white;
-  margin: 236px 0;
   margin-top: 181px;
   position: relative;
 }
@@ -861,4 +869,174 @@ body {
 
 .virus-3 img {
   width: 461px;
+}
+
+.price {
+  padding-top: 70px;
+  margin-top: 166px;
+  background-clip: content-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.price::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+  background: url("../img/bg/bg_3.jpg") top center/cover no-repeat fixed;
+}
+
+.price-title {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.price-main {
+  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.price-main__item {
+  background-color: #fff;
+  width: 350px;
+  height: 580px;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.price .hot {
+  border: 1px solid #ff3242;
+}
+
+.price .virus {
+  z-index: 1;
+}
+
+.price .virus-4 {
+  top: -130px;
+  right: -270px;
+}
+
+.price .virus-4 img {
+  width: 459px;
+}
+
+.price .virus-5 {
+  left: -230px;
+  top: 870px;
+}
+
+.price .virus-5 img {
+  width: 459px;
+}
+
+.item__title {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.item__volume {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.item__hot {
+  margin-left: 50px;
+  position: absolute;
+  top: 120px;
+}
+
+.item__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.item__img img {
+  height: 237px;
+}
+
+.item__price {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.item__price strong {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, #ff3242), color-stop(115%, rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(90deg, #ff3242 5%, rgba(255, 255, 255, 0) 115%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.item__price_old {
+  margin-top: -35px;
+  color: rgba(51, 51, 51, 0.65);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-left: 50px;
+  width: 100px;
+  position: relative;
+}
+
+.item__price_old::before {
+  content: '';
+  background-color: #333333;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 17px;
+  left: -11%;
+}
+
+.item__button {
+  margin: 0 auto;
 }
