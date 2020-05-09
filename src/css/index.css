@@ -960,7 +960,7 @@ body {
   width: 459px;
 }
 
-.item__title {
+.price .item__title {
   font-family: Roboto;
   font-size: 30px;
   font-weight: 500;
@@ -969,7 +969,7 @@ body {
   margin-bottom: 32px;
 }
 
-.item__volume {
+.price .item__volume {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 500;
@@ -978,13 +978,13 @@ body {
   margin-bottom: 25px;
 }
 
-.item__hot {
+.price .item__hot {
   margin-left: 50px;
   position: absolute;
   top: 120px;
 }
 
-.item__img {
+.price .item__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -994,11 +994,11 @@ body {
   margin-bottom: 25px;
 }
 
-.item__img img {
+.price .item__img img {
   height: 237px;
 }
 
-.item__price {
+.price .item__price {
   font-family: Montserrat;
   font-size: 40px;
   font-weight: 400;
@@ -1007,7 +1007,7 @@ body {
   margin-bottom: 35px;
 }
 
-.item__price strong {
+.price .item__price strong {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, #ff3242), color-stop(115%, rgba(255, 255, 255, 0)));
   background-image: linear-gradient(90deg, #ff3242 5%, rgba(255, 255, 255, 0) 115%);
   -webkit-background-clip: text;
@@ -1015,7 +1015,7 @@ body {
   color: transparent;
 }
 
-.item__price_old {
+.price .item__price_old {
   margin-top: -35px;
   color: rgba(51, 51, 51, 0.65);
   font-family: Montserrat;
@@ -1027,7 +1027,7 @@ body {
   position: relative;
 }
 
-.item__price_old::before {
+.price .item__price_old::before {
   content: '';
   background-color: #333333;
   height: 1px;
@@ -1037,6 +1037,98 @@ body {
   left: -11%;
 }
 
-.item__button {
+.price .item__button {
   margin: 0 auto;
+}
+
+.howto {
+  margin-top: 156px;
+  padding-top: 30px;
+}
+
+.howto .wrapper {
+  overflow-x: hidden;
+  padding-top: 70px;
+}
+
+.howto-title {
+  text-align: center;
+}
+
+.howto-main {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.howto-main__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 650px;
+  width: 30%;
+  position: relative;
+}
+
+.howto-main__item::after {
+  content: '';
+  position: absolute;
+  top: 117px;
+  left: 0;
+  height: 1px;
+  background-color: gray;
+  width: 120%;
+  z-index: 1;
+}
+
+.howto .item__title {
+  font-family: "PT Serif";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.howto .item__point img {
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+}
+
+.howto .item__img img {
+  width: 300px;
+  border: 20px solid rgba(255, 223, 0, 0.4);
+  border-radius: 50%;
+}
+
+.howto .item__text {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  max-width: 308px;
+}
+
+.howto .second {
+  max-width: 258px;
+}
+
+.howto .third {
+  max-width: 208px;
 }
