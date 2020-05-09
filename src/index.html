@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
-			href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|PT+Serif|Roboto:400,500&display=swap&subset=cyrillic"
+			href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|PT+Serif|Roboto:400,500&display=swap&subset=cyrillic"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/index.css" />
@@ -17,14 +17,13 @@
 					><img
 						src="img/logo.png"
 						ondrag="return false"
-						ondragdrop="return false"
 						ondragstart="return false"
 						alt="Farbe"
 				/></a>
 				<div class="header-links">
 					<a href="#main" class="header-link">Главная</a>
 					<a href="#advantages" class="header-link">Почему мы</a>
-					<a href="" class="header-link">Применение</a>
+					<a href="#usage" class="header-link">Применение</a>
 					<a href="" class="header-link">Цена</a>
 				</div>
 				<div class="header-button-wrapper">
@@ -59,7 +58,6 @@
 								class="list__img"
 								src="img/icons/bacteria.svg"
 								ondrag="return false"
-								ondragdrop="return false"
 								ondragstart="return false"
 								alt="Bacteria icon"
 							/>
@@ -72,7 +70,6 @@
 								class="list__img"
 								src="img/icons/food.svg"
 								ondrag="return false"
-								ondragdrop="return false"
 								ondragstart="return false"
 								alt="Food icon"
 							/>
@@ -84,7 +81,6 @@
 								class="list__img"
 								src="img/icons/smell.svg"
 								ondrag="return false"
-								ondragdrop="return false"
 								ondragstart="return false"
 								alt="Smelt icon"
 							/>
@@ -98,7 +94,6 @@
 						<img
 							src="img/items/anti.png"
 							ondrag="return false"
-							ondragdrop="return false"
 							ondragstart="return false"
 							alt="Antiseptic"
 							class="main-rightside__septic"
@@ -106,7 +101,6 @@
 						<img
 							src="img/icons/Vector.svg"
 							ondrag="return false"
-							ondragdrop="return false"
 							ondragstart="return false"
 							alt="icon"
 							class="main-rightside__gost"
@@ -115,7 +109,6 @@
 					<img
 						src="img/circles/dashed-circles.png"
 						ondrag="return false"
-						ondragdrop="return false"
 						ondragstart="return false"
 						alt="Dashed circles"
 						class="main-rightside__d-circles"
@@ -124,7 +117,6 @@
 						<img
 							src="img/ellipses/Ellipse_1.png"
 							ondrag="return false"
-							ondragdrop="return false"
 							ondragstart="return false"
 							alt="Ellipse"
 						/>
@@ -134,7 +126,7 @@
 			</div>
 		</main>
 		<!-- /.main -->
-		<div class="wrapper">
+		<div class="wrapper" id="wrap">
 			<div class="form">
 				<div class="form-header">
 					<div class="form-header-prices">
@@ -190,7 +182,7 @@
 			</div>
 			<!-- /.form -->
 		</div>
-		<section id="advantages" class="advantages">
+		<section class="advantages" id="advantages">
 			<div class="wrapper">
 				<h2 class="advantages-title section-title">
 					Почему наш<br />
@@ -262,6 +254,64 @@
 			</div>
 		</section>
 		<!-- /.advantages -->
+		<section class="usage" id="usage">
+			<div class="wrapper">
+				<h2 class="usage-title section-title">Обширное применение</h2>
+				<!-- /.usage-title section-title -->
+				<div class="usage-main">
+					<div class="usage-main__list">
+						детские учреждения (школы, детсады и т.д.)
+					</div>
+					<!-- /.usage-main__list -->
+					<div class="usage-main__list">косметические, массажные салоны</div>
+					<!-- /.usage-main__list -->
+					<div class="usage-main__list">предприятия мясной промышленности</div>
+					<!-- /.usage-main__list -->
+					<div class="usage-main__list">вирусологические лаборатории</div>
+					<!-- /.usage-main__list -->
+					<div class="usage-main__list">предприятия общественного питания</div>
+					<!-- /.usage-main__list -->
+					<div class="usage-main__list">профилактические учреждения</div>
+					<!-- /.usage-main__list -->
+					<div class="usage-main__list">
+						предприятия продовольственной торговли
+					</div>
+					<!-- /.usage-main__list -->
+					<div class="usage-main__list">учреждения соцобеспечения</div>
+					<!-- /.usage-main__list -->
+					<div class="virus-1 virus">
+						<img
+							src="img/viruses/virus__green.png"
+							ondrag="return false"
+							ondragstart="return false"
+							alt="Green virus"
+						/>
+					</div>
+					<!-- /.virus-1 -->
+					<div class="virus-2 virus">
+						<img
+							src="img/viruses/coronavirus-orang.png"
+							ondrag="return false"
+							ondragstart="return false"
+							alt="Orange virus"
+						/>
+					</div>
+					<!-- /.virus-2 -->
+					<div class="virus-3 virus">
+						<img
+							src="img/viruses/virus__blue.png"
+							ondrag="return false"
+							ondragstart="return false"
+							alt="Blue virus"
+						/>
+					</div>
+					<!-- /.virus-3 -->
+				</div>
+				<!-- /.usage-main -->
+			</div>
+			<!-- /.wrapper -->
+		</section>
+		<!-- /.usage -->
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script src="js/jquery.inputmask.min.js"></script>
 		<script src="https://e-timer.ru/js/etimer.js"></script>
