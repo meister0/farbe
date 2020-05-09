@@ -105,8 +105,12 @@
     margin-top: 30px
     width: 100%
     .yellow
+      color: $color-text
       text-decoration: underline
       cursor: pointer
+      transition: .1s ease-in-out
+      &:hover
+        color: $color-main
     label
       display: inline-block 
       font-family: Roboto
@@ -138,19 +142,29 @@
   
 
 .eTimer
-  
-  width: 450px
+  display: flex!important
+  justify-content: center!important
+  align-items: center !important
+  width: 410px
   height: 123px
   border-radius: 15px
   border: 1px solid #ff3242
   .etNumber
+    border-width: 1px!important
+    text-align: center!important
     font-family: Montserrat !important
     font-size: 36px !important
-    font-weight: 400 !important
-    line-height: 44px !important
+    font-weight: 500 !important
+    width: 36px!important
+    line-height: 46px !important
     color: $color-text !important
     border-radius: 7px !important
   .etSep
     padding: 0 0 40px 0 !important
   .etSign
     padding-top: 10px !important
+    font-family: Montserrat!important
+    font-size: 16px!important
+    font-weight: 500!important
+    letter-spacing: 0.16px!important
+    line-height: 20px!important

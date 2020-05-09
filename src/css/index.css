@@ -172,7 +172,7 @@ body {
   background-size: 110%;
   background-color: rbga(255, 255, 255, 0.3);
   z-index: -1;
-  opacity: 0.15;
+  opacity: 0.18;
 }
 
 .main .wrapper {
@@ -483,8 +483,15 @@ body {
 }
 
 .form__policy .yellow {
+  color: #333333;
   text-decoration: underline;
   cursor: pointer;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.form__policy .yellow:hover {
+  color: #ffdf00;
 }
 
 .form__policy label {
@@ -524,17 +531,29 @@ body {
 }
 
 .eTimer {
-  width: 450px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  width: 410px;
   height: 123px;
   border-radius: 15px;
   border: 1px solid #ff3242;
 }
 
 .eTimer .etNumber {
+  border-width: 1px !important;
+  text-align: center !important;
   font-family: Montserrat !important;
   font-size: 36px !important;
-  font-weight: 400 !important;
-  line-height: 44px !important;
+  font-weight: 500 !important;
+  width: 36px !important;
+  line-height: 46px !important;
   color: #333333 !important;
   border-radius: 7px !important;
 }
@@ -545,6 +564,11 @@ body {
 
 .eTimer .etSign {
   padding-top: 10px !important;
+  font-family: Montserrat !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.16px !important;
+  line-height: 20px !important;
 }
 
 .advantages {
@@ -636,6 +660,12 @@ body {
   width: 100%;
   height: 90%;
   opacity: 0.5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.advantages-main-advantage:hover::after {
+  opacity: 0.8;
 }
 
 .advantages-main-advantage__title {
@@ -689,7 +719,11 @@ body {
   top: -50px;
   left: 10px;
   height: 85%;
-  opacity: 0.7;
+  opacity: 0.6;
+}
+
+.advantages-main-advantage:nth-child(2):hover::after {
+  opacity: 1;
 }
 
 .advantages-main-advantage:nth-child(3)::after {
@@ -697,7 +731,11 @@ body {
   top: -35px;
   left: 70px;
   height: 85%;
-  opacity: 0.7;
+  opacity: 0.6;
+}
+
+.advantages-main-advantage:nth-child(3):hover::after {
+  opacity: 1;
 }
 
 .advantages-main-advantage:nth-child(4)::after {
