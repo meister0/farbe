@@ -4,6 +4,8 @@
   width: 100%
   padding: 6px 0px
   background-color: $color-main
+  z-index: 100
+  min-width: 1210px
   .wrapper
     display: flex
     justify-content: space-around
@@ -15,8 +17,9 @@
 
   &-links
     display: flex
-    justify-content: space-between  
-    width: 40%
+    justify-content: space-around  
+    width: 65%
+    padding: 0 85px
   &-link
     font-family: Roboto
     font-size: 18px
@@ -25,6 +28,7 @@
     position: relative
     display: flex
     align-items: center
+    color: $color-text
     &:visited
       color: $color-text
     &::before 
