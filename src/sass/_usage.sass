@@ -1,11 +1,21 @@
 .usage
-  padding-top: 55px
-  background-clip: content-box
-  height: 490px
+  margin: 0 30px
+  border-radius: 10px
+  border-top: 100px solid transparent
+  background-clip: padding-box
+  height: 550px
   background-color: #333333
   color: white
-  margin-top: 181px
+  margin-top: 151px
   position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: -25px
+    left: 0
+    right: 0
+    border-radius: 10px
+    border-top: 50px solid #333333
   .wrapper
   &-title
     display: flex
@@ -20,7 +30,7 @@
     justify-content: space-between
     padding-left: 30px
     &__list
-      width: 23%
+      width: 22%
       padding-left: 40px
       margin-bottom: 70px
       font-family: Montserrat

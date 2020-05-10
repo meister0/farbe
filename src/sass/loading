@@ -1,0 +1,119 @@
+.pace
+  width: 280px
+  height: 600px
+  position: fixed
+  top: 45%
+  right: 45%
+  z-index: 2000
+  -webkit-transform: scale(0)
+  -moz-transform: scale(0)
+  -ms-transform: scale(0)
+  -o-transform: scale(0)
+  transform: scale(0)
+  opacity: 0
+  -webkit-transition: all 2s linear 0s
+  -moz-transition: all 2s linear 0s
+  transition: all 2s linear 0s
+
+  &.pace-active
+    -webkit-transform: scale(0.25)
+    -moz-transform: scale(0.25)
+    -ms-transform: scale(0.25)
+    -o-transform: scale(0.25)
+    transform: scale(0.25)
+    opacity: 1
+
+  .pace-activity
+    width: 280px
+    height: 280px
+    border-radius: 140px
+    background: #ffdf00
+    position: absolute
+    top: 0
+    z-index: 1911
+    -webkit-animation: pace-bounce 1s infinite
+    -moz-animation: pace-bounce 1s infinite
+    -o-animation: pace-bounce 1s infinite
+    -ms-animation: pace-bounce 1s infinite
+    animation: pace-bounce 1s infinite
+
+  .pace-progress
+    position: absolute
+    display: block
+    left: 50%
+    bottom: 0
+    z-index: 1910
+    margin-left: -60px
+    width: 120px
+    height: 150px
+    background: rgba(20, 20, 20, 0.1)
+    box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.1)
+    border-radius: 60px / 80px
+    -webkit-transform: scaleY(0.3) !important
+    -moz-transform: scaleY(0.3) !important
+    -ms-transform: scaleY(0.3) !important
+    -o-transform: scaleY(0.3) !important
+    transform: scaleY(0.3) !important
+    -webkit-animation: pace-compress .5s infinite alternate
+    -moz-animation: pace-compress .5s infinite alternate
+    -o-animation: pace-compress .5s infinite alternate
+    -ms-animation: pace-compress .5s infinite alternate
+    animation: pace-compress .5s infinite alternate
+
+@keyframes pace-bounce
+  0%
+    top: 0
+    animation-timing-function: ease-in
+
+  50%
+    top: 280px
+    height: 280px
+    animation-timing-function: ease-out
+
+  55%
+    top: 320px
+    height: 180px
+    border-radius: 140px / 120px
+    animation-timing-function: ease-in
+
+  65%
+    top: 240px
+    height: 280px
+    border-radius: 140px
+    animation-timing-function: ease-out
+
+  95%
+    top: 0
+    animation-timing-function: ease-in
+
+  100%
+    top: 0
+    animation-timing-function: ease-in
+
+@keyframes pace-compress
+  0%
+    bottom: 0
+    margin-left: -60px
+    width: 120px
+    height: 150px
+    background: rgba(20, 20, 20, 0.1)
+    box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.1)
+    border-radius: 60px / 80px
+    animation-timing-function: ease-in
+
+  100%
+    bottom: 60px
+    margin-left: -20px
+    width: 40px
+    height: 10px
+    background: rgba(20, 20, 20, 0.3)
+    box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.3)
+    border-radius: 40px / 40px
+    animation-timing-function: ease-out
+
+body > :not(.pace),body:before,body:after 
+  transition: opacity .4s ease-in-out
+
+
+body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-done):after 
+  opacity: 0
