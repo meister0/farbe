@@ -20,6 +20,23 @@
     height: 100%
     background: url(../img/bg/bg_2.jpg) center / cover no-repeat fixed
     opacity: 0.25
+  &:hover
+    .advantages-main-advantage
+      &:nth-child(1)
+        &::after
+          opacity: 0.9
+      &:nth-child(2)
+        &::after
+          opacity: 1
+          transition-delay: 0.1s
+      &:nth-child(3)
+        &::after
+          opacity: 1
+          transition-delay: 0.2s
+      &:nth-child(4)
+        &::after
+          opacity: 0.8
+          transition-delay: 0.3s
   &-title
     height: 190px
     display: flex
@@ -93,7 +110,7 @@
           top: -35px
       &:nth-child(2)
         &::after
-          background: url(../img/ellipses/Ellipse_3.png) center / contain no-repeat
+          background: url(../img/ellipses/Ellipse_3-upd.png) center / contain no-repeat
           top: -50px  
           left: 10px
           height: 85%
@@ -102,7 +119,7 @@
           opacity: 1
       &:nth-child(3)
         &::after
-          background: url(../img/ellipses/Ellipse_4.png) center / contain no-repeat
+          background: url(../img/ellipses/Ellipse_4-upd.png) center / contain no-repeat
           top: -35px
           left: 70px
           height: 85%

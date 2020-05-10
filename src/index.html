@@ -7,6 +7,10 @@
 			href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|PT+Serif|Roboto:400,500&display=swap&subset=cyrillic"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+		/>
 		<link rel="stylesheet" href="css/index.css" />
 		<title>Антисептик №1 в Тюмени</title>
 	</head>
@@ -40,9 +44,8 @@
 					</header>
 					<!-- /.main-leftside__header -->
 					<div class="main-leftside__text">
-						Создан и разработан<br />с любовью по
-						<span class="yellow">уникальной</span> рецептуре специально для Вас
-						и Ваших близких
+						Создан и разработан<br />с любовью по уникальной рецептуре
+						специально для Вас и Ваших близких
 					</div>
 					<!-- /.main-leftside__text -->
 					<small class="main-leftside__small"
@@ -53,7 +56,11 @@
 				<!-- /.main-leftside -->
 				<div class="main-rightside">
 					<div class="main-rightside-lists">
-						<div class="main-rightside__list main-rightside__list1">
+						<div
+							class="main-rightside__list main-rightside__list1 wow fadeIn"
+							data-wow-delay=".1s"
+							data-wow-duration="1.5s"
+						>
 							<img
 								class="list__img"
 								src="img/icons/bacteria.svg"
@@ -65,7 +72,11 @@
 							бактерий и вирусов
 						</div>
 						<!-- /.main-rightside__list main-rightside__list1 -->
-						<div class="main-rightside__list main-rightside__list2">
+						<div
+							class="main-rightside__list main-rightside__list2 wow fadeIn"
+							data-wow-delay=".2s"
+							data-wow-duration="1.5s"
+						>
 							<img
 								class="list__img"
 								src="img/icons/food.svg"
@@ -76,7 +87,11 @@
 							Без содержания спирта, не сушит кожу
 						</div>
 						<!-- /.main-rightside__list main-rightside__list2 -->
-						<div class="main-rightside__list main-rightside__list3">
+						<div
+							class="main-rightside__list main-rightside__list3 wow fadeIn"
+							data-wow-delay=".3s"
+							data-wow-duration="1.5s"
+						>
 							<img
 								class="list__img"
 								src="img/icons/smell.svg"
@@ -96,14 +111,18 @@
 							ondrag="return false"
 							ondragstart="return false"
 							alt="Antiseptic"
-							class="main-rightside__septic"
+							class="main-rightside__septic wow fadeIn"
+							data-wow-delay=".1s"
+							data-wow-duration="1.5s"
 						/>
 						<img
 							src="img/icons/Vector.svg"
 							ondrag="return false"
 							ondragstart="return false"
 							alt="icon"
-							class="main-rightside__gost"
+							class="main-rightside__gost wow fadeIn"
+							data-wow-delay=".2s"
+							data-wow-duration="1s"
 						/>
 					</div>
 					<img
@@ -126,7 +145,12 @@
 			</div>
 		</main>
 		<!-- /.main -->
-		<div class="wrapper" id="wrap">
+		<div
+			class="wrapper wow fadeInUp"
+			data-wow-delay=".4s"
+			data-wow-duration="1s"
+			id="wrap"
+		>
 			<div class="form">
 				<div class="form-header">
 					<div class="form-header-prices">
@@ -314,9 +338,6 @@
 		<!-- /.usage -->
 		<section class="price" id="price">
 			<div class="wrapper">
-				<div class="virus-4 virus">
-					<img src="img/viruses/virus_yellow.png" alt="Virus" />
-				</div>
 				<h2 class="price-title section-title">Цена равная качеству</h2>
 				<!-- /.price-title section-title -->
 				<div class="price-main">
@@ -367,11 +388,14 @@
 						<!-- /.item__button -->
 					</div>
 					<!-- /.price-main__item -->
+					<div class="virus-4 virus">
+						<img src="img/viruses/virus_yellow.png" alt="Virus" />
+					</div>
+					<div class="virus-5 virus">
+						<img src="img/viruses/virus_yellow.png" alt="Virus" />
+					</div>
 				</div>
 				<!-- /.price-main -->
-				<div class="virus-5 virus">
-					<img src="img/viruses/virus_yellow.png" alt="Virus" />
-				</div>
 			</div>
 			<!-- /.wrapper -->
 		</section>
@@ -385,7 +409,11 @@
 				</h2>
 				<!-- /.howto-title section-title -->
 				<div class="howto-main">
-					<div class="howto-main__item">
+					<div
+						class="howto-main__item wow fadeInRight"
+						data-wow-delay=".1s"
+						data-wow-duration="1s"
+					>
 						<h3 class="item__title">Заказ</h3>
 						<!-- /.item__title -->
 						<div class="item__point">
@@ -396,13 +424,21 @@
 							<img src="img/circles/circle_1.png" alt="Photo" />
 						</div>
 						<!-- /.item__img -->
-						<p class="item__text">
+						<p
+							class="item__text wow fadeInDown"
+							data-wow-delay=".3s"
+							data-wow-duration="1s"
+						>
 							Отправьте заявку на сайте, мы свяжемся с вами и за пару минут
 							оформим заказ
 						</p>
 					</div>
 					<!-- /.howto-main__item -->
-					<div class="howto-main__item">
+					<div
+						class="howto-main__item wow fadeIn"
+						data-wow-delay="0"
+						data-wow-duration="1s"
+					>
 						<h3 class="item__title">Доставка</h3>
 						<!-- /.item__title -->
 						<div class="item__point">
@@ -413,12 +449,20 @@
 							<img src="img/circles/circle_2.png" alt="Photo" />
 						</div>
 						<!-- /.item__img -->
-						<p class="item__text second">
+						<p
+							class="item__text second wow fadeInDown"
+							data-wow-delay=".4s"
+							data-wow-duration="1s"
+						>
 							Мы доставим ваш товар всего за 100 ₽ в любую точку города
 						</p>
 					</div>
 					<!-- /.howto-main__item -->
-					<div class="howto-main__item">
+					<div
+						class="howto-main__item wow fadeInLeft"
+						data-wow-delay=".1s"
+						data-wow-duration="1s"
+					>
 						<h3 class="item__title">Оплата</h3>
 						<!-- /.item__title -->
 						<div class="item__point">
@@ -429,7 +473,11 @@
 							<img src="img/circles/circle_3.png" alt="Photo" />
 						</div>
 						<!-- /.item__img -->
-						<p class="item__text third">
+						<p
+							class="item__text third wow fadeInDown"
+							data-wow-delay=".5s"
+							data-wow-duration="1s"
+						>
 							Вы оплачиваете заказ только после его получения
 						</p>
 					</div>
@@ -443,6 +491,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script src="js/jquery.inputmask.min.js"></script>
 		<script src="https://e-timer.ru/js/etimer.js"></script>
+		<script src="js/wow.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

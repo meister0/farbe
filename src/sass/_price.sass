@@ -3,7 +3,7 @@
   margin-top: 166px
   background-clip: content-box
   width: 100%
-  height: 100%
+  height: 860px
   position: relative
   &::after
     content: ''
@@ -15,17 +15,19 @@
     height: 100%
     z-index: -1
     opacity: 0.4
-    background: url(../img/bg/bg_3.jpg) top center / cover no-repeat fixed
+    background: url(../img/bg/bg_3-obr.jpg) top center / cover no-repeat fixed
   .wrapper
-    
+    z-index: 4
   &-title
     padding-top: 60px
     text-align: center
   &-main
     padding-top: 60px
     display: flex
+    flex-wrap: wrap
     justify-content: space-around
     align-items: center
+    margin-bottom: -300px
     &__item
       background-color: #fff
       width: 350px
@@ -38,18 +40,21 @@
       align-items: space-between
       position: relative
       margin-bottom: 70px
-  .hot
-    border: 1px solid #ff3242
+      border: 2px solid transparent
+      transition: .2s ease-in-out
+      &:hover
+        border: 2px solid #ff3242
   .virus
+    position: relative
     z-index: 1
     &-4
-      top: -130px
-      right: -270px
+      top: -70px
+      left: -670px  
       img
         width: 459px
     &-5
-      left: -230px
-      top: 870px
+      right: -650px
+      top: -1040px
       img
         width: 459px
   .item

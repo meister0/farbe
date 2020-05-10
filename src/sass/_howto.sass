@@ -1,4 +1,5 @@
 .howto
+  z-index: 5
   margin-top: 156px
   padding-top: 30px
   .wrapper
@@ -20,14 +21,15 @@
       height: 650px
       width: 30%
       position: relative
+      transition: .2s ease-in-out
       &::after
         content: ''
         position: absolute
         top: 117px
-        left: 0
+        left: -9%
         height: 1px
         background-color: lighten($color-text, 30)
-        width: 120%
+        width: 117%
         z-index: 1
   .item
     &__title
@@ -43,15 +45,19 @@
     &__img
       img
         width: 300px
-        border: 20px solid rgba(255, 223, 0, 0.4)
+        opacity: 1    
+        border: 17.5px solid rgba(255, 223, 0, 0.7)
         border-radius: 50%
+        transition: .2s ease-in-out
+          
     &__text
       font-family: Montserrat
       font-size: 20px
       font-weight: 400
       line-height: 25px
       max-width: 308px
-    
+
+
   .second
     max-width: 258px
   .third

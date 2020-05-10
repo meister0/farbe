@@ -65,7 +65,7 @@ body {
 .header {
   position: fixed;
   height: 70px;
-  width: 100%;
+  width: 100vw;
   padding: 6px 0px;
   background-color: #ffdf00;
   z-index: 100;
@@ -182,8 +182,7 @@ body {
   left: 0;
   width: 100%;
   height: 840px;
-  background: url("../img/bg/bg_1.jpg") top -340px center no-repeat fixed;
-  background-size: cover;
+  background: url("../img/bg/bg_1.jpg") top -340px left/cover no-repeat fixed;
   background-color: rbga(255, 255, 255, 0.3);
   z-index: -1;
   opacity: 0.18;
@@ -624,6 +623,28 @@ body {
   opacity: 0.25;
 }
 
+.advantages:hover .advantages-main-advantage:nth-child(1)::after {
+  opacity: 0.9;
+}
+
+.advantages:hover .advantages-main-advantage:nth-child(2)::after {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.advantages:hover .advantages-main-advantage:nth-child(3)::after {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.advantages:hover .advantages-main-advantage:nth-child(4)::after {
+  opacity: 0.8;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
 .advantages-title {
   height: 190px;
   display: -webkit-box;
@@ -735,7 +756,7 @@ body {
 }
 
 .advantages-main-advantage:nth-child(2)::after {
-  background: url("../img/ellipses/Ellipse_3.png") center/contain no-repeat;
+  background: url("../img/ellipses/Ellipse_3-upd.png") center/contain no-repeat;
   top: -50px;
   left: 10px;
   height: 85%;
@@ -747,7 +768,7 @@ body {
 }
 
 .advantages-main-advantage:nth-child(3)::after {
-  background: url("../img/ellipses/Ellipse_4.png") center/contain no-repeat;
+  background: url("../img/ellipses/Ellipse_4-upd.png") center/contain no-repeat;
   top: -35px;
   left: 70px;
   height: 85%;
@@ -835,39 +856,39 @@ body {
   z-index: 2;
 }
 
-.virus {
-  position: absolute;
+.usage .virus {
+  position: relative;
   top: 100%;
 }
 
-.virus-1 {
-  top: -250px;
-  right: 100px;
+.usage .virus-1 {
+  top: -730px;
+  left: 1000px;
   z-index: -1;
 }
 
-.virus-1 img {
+.usage .virus-1 img {
   width: 400px;
 }
 
-.virus-2 {
-  top: 230px;
-  left: -50px;
+.usage .virus-2 {
+  top: -270px;
+  left: -900px;
   opacity: 0.5;
 }
 
-.virus-2 img {
+.usage .virus-2 img {
   width: 230px;
   -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 
-.virus-3 {
-  top: 250px;
-  left: -50px;
+.usage .virus-3 {
+  top: -240px;
+  left: -1170px;
 }
 
-.virus-3 img {
+.usage .virus-3 img {
   width: 461px;
 }
 
@@ -876,7 +897,7 @@ body {
   margin-top: 166px;
   background-clip: content-box;
   width: 100%;
-  height: 100%;
+  height: 860px;
   position: relative;
 }
 
@@ -890,7 +911,11 @@ body {
   height: 100%;
   z-index: -1;
   opacity: 0.4;
-  background: url("../img/bg/bg_3.jpg") top center/cover no-repeat fixed;
+  background: url("../img/bg/bg_3-obr.jpg") top center/cover no-repeat fixed;
+}
+
+.price .wrapper {
+  z-index: 4;
 }
 
 .price-title {
@@ -903,11 +928,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: -300px;
 }
 
 .price-main__item {
@@ -932,19 +960,23 @@ body {
   align-items: space-between;
   position: relative;
   margin-bottom: 70px;
+  border: 2px solid transparent;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
-.price .hot {
-  border: 1px solid #ff3242;
+.price-main__item:hover {
+  border: 2px solid #ff3242;
 }
 
 .price .virus {
+  position: relative;
   z-index: 1;
 }
 
 .price .virus-4 {
-  top: -130px;
-  right: -270px;
+  top: -70px;
+  left: -670px;
 }
 
 .price .virus-4 img {
@@ -952,8 +984,8 @@ body {
 }
 
 .price .virus-5 {
-  left: -230px;
-  top: 870px;
+  right: -650px;
+  top: -1040px;
 }
 
 .price .virus-5 img {
@@ -1042,6 +1074,7 @@ body {
 }
 
 .howto {
+  z-index: 5;
   margin-top: 156px;
   padding-top: 30px;
 }
@@ -1085,16 +1118,18 @@ body {
   height: 650px;
   width: 30%;
   position: relative;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .howto-main__item::after {
   content: '';
   position: absolute;
   top: 117px;
-  left: 0;
+  left: -9%;
   height: 1px;
   background-color: gray;
-  width: 120%;
+  width: 117%;
   z-index: 1;
 }
 
@@ -1113,8 +1148,11 @@ body {
 
 .howto .item__img img {
   width: 300px;
-  border: 20px solid rgba(255, 223, 0, 0.4);
+  opacity: 1;
+  border: 17.5px solid rgba(255, 223, 0, 0.7);
   border-radius: 50%;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .howto .item__text {

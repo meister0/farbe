@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	new WOW().init();
 	$('.form__tel').inputmask({ mask: '+7 (999) 999-9999' }); //specifying options
 	$('.eTimer').eTimer({
 		etType: 0,
