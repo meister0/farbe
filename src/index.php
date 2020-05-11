@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,12 +11,17 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
 		/>
+		<link rel="shortcut icon" href="img/favicon.png" />
 		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/pace.min.js"></script>
 		<script data-pace-options='{ "ajax": false }' src="pace.js"></script>
 		<title>Антисептик №1 в Тюмени</title>
 	</head>
 	<body>
+		<?php
+			$zaschita = md5(md5(time())."ivan");
+			$vremya = md5(time());
+		?>
 		<header class="header">
 			<div class="wrapper">
 				<a class="header-logo" href="#main"
@@ -33,7 +38,7 @@
 					<a href="#howto" class="header-link">Доставка</a>
 				</div>
 				<div class="header-button-wrapper">
-					<button class="button header-button">Оставить заявку</button>
+					<a href="#form" class="button header-button">Оставить заявку</a>
 				</div>
 			</div>
 		</header>
@@ -153,7 +158,7 @@
 			data-wow-duration="1s"
 			id="wrap"
 		>
-			<div class="form">
+			<div class="form" id="form">
 				<div class="form-header">
 					<div class="form-header-prices">
 						<div class="form-header-prices__old">619 ₽</div>
@@ -175,26 +180,30 @@
 						Мы свяжемся с Вами в течение 29 секунд
 					</div>
 					<!-- /.form-footer__text -->
-					<form action="#" method="POST" class="form-footer__form">
+					<form action="send.php?p=<?=$vremya?>" method="POST" class="form-footer__form">
 						<input
 							type="text"
 							name="Name"
 							class="form__name"
 							placeholder="Имя"
+							required
 						/>
 						<input
 							type="tel"
 							name="Tel"
 							class="form__tel"
 							placeholder="Телефон"
+							required
 						/>
+						<input type="hidden" name="zf" value="<?=$zaschita?>">
+						<input type="text" name="last_name" id="last_name" value="">
 						<input
 							type="submit"
 							class="form__submit button"
 							value="Оставить заявку"
 						/>
 						<div class="form__policy">
-							<input type="checkbox" class="form__checkbox" id="cb" checked />
+							<input type="checkbox" class="form__checkbox" id="cb" required />
 							<label for="cb">
 								Нажимая на кнопку “Оставить заявку”, Вы соглашаетесь с
 								<a href="#" class="yellow">политикой конфиденциальности</a>
@@ -574,7 +583,7 @@
 				<div class="form-footer form-2-footer">
 					<!-- /.form-footer__text -->
 					<form
-						action="#"
+						action="send.php?p=<?=$vremya?>"
 						method="POST"
 						class="form-footer__form form-2-footer__form"
 					>
@@ -583,20 +592,24 @@
 							name="Name"
 							class="form__name"
 							placeholder="Имя"
+							required
 						/>
 						<input
 							type="tel"
 							name="Tel"
 							class="form__tel"
 							placeholder="Телефон"
+							required
 						/>
+						<input type="hidden" name="zf" value="<?=$zaschita?>">
+						<input type="text" name="last_name" id="last_name" value="">
 						<input
 							type="submit"
 							class="form__submit button"
 							value="Оставить заявку"
 						/>
 						<div class="form__policy">
-							<input type="checkbox" class="form__checkbox" id="cb2" checked />
+							<input type="checkbox" class="form__checkbox" id="cb2" required />
 							<label for="cb2">
 								Нажимая на кнопку “Оставить заявку”, Вы соглашаетесь с
 								<a href="#" class="yellow">политикой конфиденциальности</a>
@@ -616,17 +629,29 @@
 				<!-- /.section-title certificates-title -->
 				<div class="certificates-main">
 					<div class="certificates-main__certificate">
-						<img src="img/certif/doc__1.png" alt="Certificate" />
+						<img
+							src="img/certif/doc__1.png"
+							class="minimized"
+							alt="Certificate"
+						/>
 						<img src="img/angle.png" alt="Angle" />
 					</div>
 					<!-- /.certificates-main__certificate -->
 					<div class="certificates-main__certificate">
-						<img src="img/certif/doc__2.png" alt="Certificate" />
+						<img
+							src="img/certif/doc__2.png"
+							class="minimized"
+							alt="Certificate"
+						/>
 						<img src="img/angle.png" alt="Angle" />
 					</div>
 					<!-- /.certificates-main__certificate -->
 					<div class="certificates-main__certificate">
-						<img src="img/certif/doc__3.png" alt="Certificate" />
+						<img
+							src="img/certif/doc__3.png"
+							class="minimized"
+							alt="Certificate"
+						/>
 						<img src="img/angle.png" alt="Angle" />
 					</div>
 					<!-- /.certificates-main__certificate -->
