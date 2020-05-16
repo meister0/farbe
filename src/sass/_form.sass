@@ -1,29 +1,55 @@
 .form 
-  z-index: 100
+  z-index: 50
   user-select: none
   margin-left: -15px
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2)
   border-radius: 40px
   background-color: #fcfcfc
-  width: 800px
-  height: 410px
+  width: 1170px
+  height: 390px
   display: flex
   align-items: center
   justify-content: center
   flex-direction: column
-  padding: 30px
+  padding: 0px 25px
   position: relative
   top: -30px
-  left: 20px
+  margin: auto
+  &::before
+    content: ''
+    background-color: rgba(51, 51, 51, 0.3)
+    height: 1px
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 0
   &-header
     display: flex
-    height: 43%
+    height: 199px
     width: 100%
     position: relative
+    &-title
+      width: 280px
+      display: flex
+      align-items: center
+      height: 100%
+      &__title
+        color: rgba(255, 50, 66, 0.8)
+        font-family: Montserrat
+        font-size: 35px
+        font-weight: 700
+        letter-spacing: 0.35px
+        line-height: 45px
+        
     &-prices
-      width: 45%
+      height: 100%
+      width: 340px
+      display: flex
+      align-items: center
+      flex-direction: column
+      justify-content: center
       &__old
-        margin-left: 30px
+        margin-left: -80px
         color: rgba(51, 51, 51, 0.65)
         font-family: Montserrat
         font-size: 40px
@@ -50,17 +76,44 @@
         background-image: linear-gradient(90deg, #ff3242 5%, rgba(255, 255, 255, 0) 115%)
         background-clip: text
         color: transparent
-    &::before
-      content: ''
-      background-color: rgba(51, 51, 51, 0.3)
-      height: 1px
-      width: 108%
-      position: absolute
-      top: 96%
-      left: -30px
+    
   &-footer
-    height: 57%
+    height: 188px
     width: 100%
+    padding: 0px 160px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-text
+      ul
+        height: 120px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        list-style-type: none
+      &__item
+        font-family: Montserrat
+        font-size: 25px
+        font-weight: 400
+        letter-spacing: 0.25px
+        line-height: 35px
+        position: relative
+        &::before
+          position: absolute
+          content: ''
+          top: calc(50% - 8px)
+          left: -30px
+          width: 15px
+          height: 15px
+          border-radius: 50%
+          background-color: rgba(255, 50, 66, 0.6)
+    &_button
+      a
+        width: 230px
+        height: 65px
+        font-size: 20px
+        font-weight: 500
+        letter-spacing: 0.2px
     &__header
       font-family: Montserrat
       font-size: 25px
@@ -84,8 +137,6 @@
       align-items: center
       flex-wrap: wrap
 
-
-.form
   input[type="text"],[type="tel"]
     width: 255px
     height: 51px
@@ -143,33 +194,41 @@
     display: none
 
 .eTimer
+  margin: auto
   display: flex!important
   justify-content: center!important
   align-items: center !important
-  width: 410px
-  height: 123px
+  width: 517px
+  height: 150px
   border-radius: 15px
-  border: 1px solid #ff3242
+  box-shadow: none !important
+  border: 1px solid $color-main !important
   .etNumber
+    background-color: rgba(255, 223, 0, 0.3) !important
     border-width: 1px!important
+    
     text-align: center!important
     font-family: Montserrat !important
-    font-size: 36px !important
+    font-size: 48px !important
     font-weight: 500 !important
-    width: 36px!important
-    line-height: 46px !important
+    width: 45px!important
+    height: 66px !important
+    line-height: 62px !important
     color: $color-text !important
     border-radius: 7px !important
+    margin-left: 3px !important
   .etSep
-    padding: 0 0 40px 0 !important
+    padding: 0 4px 50px !important
+    padding-left: 6px !important
+    
   .etSign
     padding-top: 10px !important
     font-family: Montserrat!important
-    font-size: 16px!important
+    font-size: 18px!important
     font-weight: 500!important
-    letter-spacing: 0.16px!important
-    line-height: 20px!important
-
+    letter-spacing: 0.18px!important
+    line-height: 35px!important
 
 #wrap
-  height: 366px
+  height: 426px
+  z-index: 50
