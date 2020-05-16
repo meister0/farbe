@@ -5,9 +5,9 @@
   padding: 6px 0px
   background-color: $color-main
   z-index: 100
-  min-width: 1210px
   display: flex
   .wrapper
+    margin: auto
     display: flex
     justify-content: space-around
     padding: 0px 15px
@@ -20,7 +20,7 @@
   &-links
     display: flex
     justify-content: space-around  
-    width: 63%
+    width: 63%  
     padding: 0 85px
   &-link
     font-family: Roboto
@@ -41,7 +41,7 @@
       width: 100%
       height: 2px
       background-color: #0d0d0d
-      transition: 0.2s
+      transition: 0.4s
       transform: scaleX(0)
     &:hover::before 
       transform: scaleX(1)
@@ -49,14 +49,41 @@
   &-button
     height: 45px
     border-radius: 3px
-    border: 1px solid #333333
+    border: 1px solid $color-text
     background-color: transparent
     transition: .25s ease-in-out
     background-image: none
     &:hover
-      background-color: #333333
+      background-color: $color-text
       color: $color-main
       background-image: none
     &-wrapper
       display: flex
       align-items: center
+  &-hum
+
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    display: none
+    cursor: pointer
+    &:hover
+      .header-hum__2
+        margin-left: 10px
+    &__1,&__2,&__3
+      width: 30px
+      height: 1px
+      background-color: #000000
+      margin: 5px 0
+      transition: 0.4s
+    &__1
+      margin-top: 0 
+      
+    &__2
+      width: 20px
+      
+    &__3
+      height: 0.5px
+      margin-bottom: 0
+    &_change
+      

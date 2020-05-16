@@ -1,0 +1,78 @@
+.mobile
+  background-color: #131313
+  z-index: 200 !important
+  height: 100%
+  width: 320px
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  &-close
+    padding: 10px
+    padding-top: 15px
+  &-menu
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    height: 260px
+    
+    &__item
+      font-family: Roboto
+      font-size: 20px
+      font-weight: 400
+      letter-spacing: 0.2px
+      color: $color-main
+      position: relative
+      text-decoration: none
+      &::before 
+        content: ''
+        bottom: 15px
+        left: 0
+        top: 120%
+        position: absolute
+        width: 100%
+        height: 1px
+        background-color: $color-main
+        transition: 0.2s
+        transform: scaleX(0)
+      &:hover::before 
+        transform: scaleX(1)
+  .wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    position: relative
+    height: 100%
+    width: 100%
+    min-width: 320px
+  .header
+    &-hum
+
+      position: absolute
+      top: 20px
+      right: 20px
+      transition: .8s ease-in-out
+      &:hover
+        transform: rotate(360deg) //translate(5px, 5px)
+      &__1,&__2,&__3
+        background-color: $color-main
+      
+      &__1
+        transform: rotate(-45deg) translate(-10px, 5px)
+      &__2
+        opacity: 0
+      &__3
+        transform: rotate(45deg) translate(-10px, -5px)
+
+.overlay
+  z-index: -1
+  width: 100%
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.55)
+  align-items: center
+  justify-content: flex-end
+  opacity: 0
+  position: fixed
+  transition: .6s ease-in-out
+  display: flex

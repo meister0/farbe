@@ -3,7 +3,7 @@ $(document).ready(function () {
 	$('.form__tel').inputmask({ mask: '+7 (999) 999-9999' }); //specifying options
 	$('.eTimer').eTimer({
 		etType: 0,
-		etDate: '16.05.2020.0.0',
+		etDate: '22.05.2020.0.0',
 		etTitleText: '',
 		etTitleSize: 14,
 		etShowSign: 1,
@@ -32,14 +32,18 @@ $(document).ready(function () {
 	$('.minimized').click(function (event) {
 		var i_path = $(this).attr('src');
 		$('body').append(
-			'<div id="overlay"></div><div id="magnify"><img src="' +
+			'<div id="overlay"><div id="magnify"><img src="' +
 				i_path +
-				'"><div id="close-popup"><i></i></div></div>'
+				'"><div id="close-popup"><i></i></div></div></div>'
 		);
-		$('#magnify').css({
-			left: ($(document).width() - $('#magnify').outerWidth()) / 2.5,
-			// top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
-			top: ($(window).height() - $('#magnify').outerHeight()) / 2,
+		$('#overlay').css({
+			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center',
+			width: '100%',
+			height: '100%',
+			opacity: '1',
+			backgroundColor: 'rgba(0,0,0, 0.5)',
 		});
 		$('#overlay, #magnify').fadeIn('fast');
 	});
@@ -98,4 +102,57 @@ $(document).ready(function () {
 				'swing'
 			);
 	});
+	$('.price-main').slick({
+		infinite: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		dots: true,
+		draggable: false,
+		speed: 400,
+	});
+	$('.slick-slider .slick-dots .button').each(function () {
+		$(this).text($(this).parent().index() + 1);
+	});
+
+	$('.slick-slider > button:last').on('click', function () {
+		$('.slick-dots > li:first	').css({ opacity: 0 });
+		$('.slick-dots > li:last	').css({ opacity: 1 });
+	});
+	$('.slick-slider > button:first').on('click', function () {
+		$('.slick-dots > li:first	').css({ opacity: 1 });
+		$('.slick-dots > li:last	').css({ opacity: 0 });
+	});
 });
+
+function toggleCart(event) {
+	console.log(event);
+
+	if (event.target.innerText == 'В корзину') {
+		event.target.innerText = 'В корзине';
+		event.target.style.backgroundColor = ' rgba(255, 223, 0, 0.75)';
+		event.target.style.color = ' #333333';
+	} else {
+		event.target.innerText = 'В корзину';
+		event.target.style.backgroundColor = ' #ff3242';
+		event.target.style.color = ' #ffffff';
+	}
+}
+
+function toggleText(blockId) {
+	if ($(blockId).css('display') == 'none') {
+		$(blockId).animate({ height: 'show' }, 500);
+	} else {
+		$(blockId).animate({ height: 'hide' }, 500);
+	}
+}
+
+function showHum() {
+	$('.overlay').css({ opacity: '1', zIndex: '199' });
+}
+
+function hideHum() {
+	$('.overlay').css({ opacity: '0' });
+	setTimeout(() => {
+		$('.overlay').css({ zIndex: -1 });
+	}, 500);
+}
