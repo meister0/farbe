@@ -124,17 +124,13 @@ $(document).ready(function () {
 	});
 });
 
-function toggleCart(event) {
-	console.log(event);
+function checkInput(value) {
+	let block = /[0-9 \W]/g;
+	console.log(value);
 
-	if (event.target.innerText == 'В корзину') {
-		event.target.innerText = 'В корзине';
-		event.target.style.backgroundColor = ' rgba(255, 223, 0, 0.75)';
-		event.target.style.color = ' #333333';
-	} else {
-		event.target.innerText = 'В корзину';
-		event.target.style.backgroundColor = ' #ff3242';
-		event.target.style.color = ' #ffffff';
+	if (value.match(block) && !value.match(/[а-яА-Я]/)) {
+		alert('Введены запрещенные символы');
+		return true;
 	}
 }
 
