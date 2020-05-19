@@ -29,10 +29,21 @@ function watch(done) {
 		server: 'src/',
 	});
 	gulp.watch('src/sass/*.sass', style);
-	gulp.watch('src/*.html').on('change', () => {
+	gulp.watch('src/*.php').on('change', () => {
 		browserSync.reload();
 		done();
 	});
+	gulp.watch('src/js/*.js').on('change', () => {
+		browserSync.reload();
+		done();
+	});
+	done();
+}
+function watchSass(done) {
+	browserSync.init({
+		server: 'src/',
+	});
+	gulp.watch('src/sass/*.sass', style);
 	gulp.watch('src/js/*.js').on('change', () => {
 		browserSync.reload();
 		done();
@@ -57,6 +68,7 @@ function server(done) {
 }
 
 exports.default = gulp.series(watch, style);
+exports.sass = gulp.series(watchSass, style);
 exports.serv = server;
 
 //host: '136.243.147.150'

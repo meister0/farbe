@@ -1,0 +1,32 @@
+{
+  "1": {
+    "img": "gel.png",
+    "name": "Хочу гель",
+    "price": "139",
+    "show": false
+  },
+  "2": {
+    "img": "anti.png",
+    "name": "Всегда<br/> и везде",
+    "price": "449",
+    "show": false
+  },
+  "3": {
+    "img": "1litr.png",
+    "name": "Для дома",
+    "price": "1000",
+    "show": false
+  },
+  "4": {
+    "img": "5litr.png",
+    "name": "Для офиса",
+    "price": "4500",
+    "show": false
+  },
+  "5": {
+    "img": "10litr.png",
+    "name": "Для завода",
+    "price": "7150",
+    "show": false
+  }
+}

@@ -20,6 +20,7 @@
 			$zaschita = md5(md5(time())."ivan");
 			$vremya = md5(time());
 		?>
+
 	<div class="overlay" onclick="hideHum(event)">
 		<div class="mobile" onclick="event.stopPropagation()">
 
@@ -63,6 +64,42 @@
 			</div>
 		</div>
 	</header>
+	<div class="cart">
+		<button class="cart-button" onclick="toggleCartVis()">
+			<img src="img/cart.svg" alt="Cart">
+			<div class="cart-button__count">0</div>
+		</button>
+		<div class="cart-main__close" onclick="toggleCartVis()">
+			<div class="cart-main__close_line line"></div>
+			<div class="cart-main__close_line line"></div>
+		</div>
+		<div class="cart-main">
+
+			<div class="cart-main__header">Корзина товаров</div>
+			<div class="cart-main-body">
+				<div class="cart-main-body__header">
+					<div class="header__item">
+						<p>Наименование</p>
+					</div>
+					<div class="header__item">
+						<p>Цена</p>
+					</div>
+					<div class="header__item">
+						<p>Количество</p>
+					</div>
+					<div class="header__item">
+						<p>Сумма</p>
+					</div>
+				</div>
+				<div class="cart-main-body__center">
+				</div>
+				<div class="cart-main-body__footer">
+					<div class="footer__sum">Итого: <span id="cart-sum">0</span> ₽</div>
+					<div class="red footer__button dis ">Оформить заказ</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<main class="main" id="main">
 		<div class="wrapper">
 			<div class="main-leftside">
@@ -299,7 +336,7 @@
 					<div class="item__price_old">179 ₽</div>
 					<div class="item__price"><strong>139 ₽</strong></div>
 					<!-- /.item__price -->
-					<div class="item__button button" onclick="toggleCart(event)">В корзину</div>
+					<div class="item__button button" data-id="1" onclick="toggleCart(event)">В корзину</div>
 					<!-- /.item__button -->
 				</div>
 				<div class="price-main__item hot">
@@ -315,7 +352,7 @@
 					<div class="item__price_old">619 ₽</div>
 					<div class="item__price"><strong>449 ₽</strong></div>
 					<!-- /.item__price -->
-					<div class="item__button button" onclick="toggleCart(event)">В корзину</div>
+					<div class="item__button button" data-id="2" onclick="toggleCart(event)">В корзину</div>
 					<!-- /.item__button -->
 				</div>
 				<!-- /.price-main__item -->
@@ -330,12 +367,12 @@
 					<!-- /.item__img -->
 					<div class="item__price">1000 ₽</div>
 					<!-- /.item__price -->
-					<div class="item__button button" onclick="toggleCart(event)">В корзину</div>
+					<div class="item__button button" data-id="3" onclick="toggleCart(event)">В корзину</div>
 					<!-- /.item__button -->
 				</div>
 				<!-- /.price-main__item -->
 				<div class="price-main__item">
-					<h3 class="item__title">Для офисов</h3>
+					<h3 class="item__title">Для офиса</h3>
 					<!-- /.item__title -->
 					<p class="item__volume">5 л.</p>
 					<!-- /.item__volume -->
@@ -345,12 +382,12 @@
 					<!-- /.item__img -->
 					<div class="item__price">4500 ₽</div>
 					<!-- /.item__price -->
-					<div class="item__button button" onclick="toggleCart(event)">В корзину</div>
+					<div class="item__button button" data-id="4" onclick="toggleCart(event)">В корзину</div>
 					<!-- /.item__button -->
 				</div>
 				<!-- /.price-main__item -->
 				<div class="price-main__item">
-					<h3 class="item__title">Для заводов</h3>
+					<h3 class="item__title">Для завода</h3>
 					<!-- /.item__title -->
 					<p class="item__volume">10 л.</p>
 					<!-- /.item__volume -->
@@ -360,7 +397,7 @@
 					<!-- /.item__img -->
 					<div class="item__price">7150 ₽</div>
 					<!-- /.item__price -->
-					<div class="item__button button" onclick="toggleCart(event)">В корзину</div>
+					<div class="item__button button" data-id="5" onclick="toggleCart(event)">В корзину</div>
 					<!-- /.item__button -->
 				</div>
 				<!-- /.price-main__item -->
@@ -492,14 +529,15 @@
 			<div class="form-footer form-2-footer">
 				<!-- /.form-footer__text -->
 				<form action="php/send.php?p=<?=$vremya?>" method="POST" class="form-footer__form form-2-footer__form">
-					<input type="text" name="Name" class="form__name" placeholder="Имя" required />
+					<input type="text" name="Name" class="form__name" placeholder="Имя" required
+						onkeyup="checkInput(this.value) == true ? this.value ='' : this.value=this.value" />
 					<input type="tel" name="Tel" class="form__tel" placeholder="Телефон" required />
 					<input type="hidden" name="zf" value="<?=$zaschita?>" />
 					<input type="text" name="last_name" id="last_name" value="" />
 					<input type="submit" class="form__submit button" value="Отправить" />
 					<div class="form__policy">
 						<input type="checkbox" class="form__checkbox" id="cb2" required />
-						<label for="cb2">
+						<label for="cb2" required>
 							Нажимая на кнопку “Отправить”, Вы соглашаетесь с
 							<a href="pages/policy.html" class="yellow">политикой конфиденциальности</a>
 						</label>
@@ -567,6 +605,7 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/cart.js"></script>
 </body>
 
 </html>
